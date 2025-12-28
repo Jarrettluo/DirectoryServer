@@ -13,10 +13,10 @@ A simple directory sharing server for Windows with a modern GUI interface. Share
 ## Screenshots
 
 ### Main Interface
-![Main Interface](screenshots/01_main_interface.png)
+![Main Interface](screenshots/01_main_interface.jpg)
 
 ### Web Browser Access
-![Web Browser Access](screenshots/02_browser_access.png)
+![Web Browser Access](screenshots/02_browser_access.jpg)
 
 ## Installation
 
