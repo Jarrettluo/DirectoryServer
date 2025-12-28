@@ -230,7 +230,7 @@ void ServerThread()
     std::wstring urlText = L"";
     for (size_t i = 0; i < ipAddresses.size(); i++)
     {
-        if (i > 0) urlText += L" 或 ";
+        if (i > 0) urlText += L" \r\n或 ";
         urlText += L"http://" + ipAddresses[i] + L":" + std::to_wstring(PORT);
     }
     
@@ -270,6 +270,13 @@ void ServerThread()
 // 启动服务器
 void StartServer()
 {
+    // 检查服务器是否已经在运行
+    if (g_serverRunning)
+    {
+        MessageBox(g_hWnd, L"服务器已经在运行中", L"提示", MB_ICONINFORMATION);
+        return;
+    }
+    
     if (g_selectedPath.empty())
     {
         MessageBox(g_hWnd, L"请先选择目录", L"提示", MB_ICONINFORMATION);
@@ -286,7 +293,7 @@ void StartServer()
     g_serverThread = std::thread(ServerThread);
     
     // 更新界面状态
-    SetWindowText(g_hStatusLabel, L"🟢 服务器运行中");
+    SetWindowText(g_hStatusLabel, L"[运行中] 服务器运行中");
     EnableWindow(g_hStartBtn, FALSE);
     EnableWindow(g_hStopBtn, TRUE);
     EnableWindow(g_hBrowseBtn, FALSE);
@@ -304,7 +311,7 @@ void StopServer()
     }
     
     // 更新界面状态
-    SetWindowText(g_hStatusLabel, L"🔴 服务器已停止");
+    SetWindowText(g_hStatusLabel, L"[已停止] 服务器已停止");
     EnableWindow(g_hStartBtn, TRUE);
     EnableWindow(g_hStopBtn, FALSE);
     EnableWindow(g_hBrowseBtn, TRUE);

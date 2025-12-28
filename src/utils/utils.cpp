@@ -67,6 +67,8 @@ std::string HtmlEscape(const std::string& str)
         case '>': result += "&gt;"; break;
         case '"': result += "&quot;"; break;
         case '\'': result += "&apos;"; break;
+        case '\n': result += "<br>"; break;  // 换行符转换为<br>标签
+        case '\r': break;  // 忽略回车符
         default: result += c; break;
         }
     }

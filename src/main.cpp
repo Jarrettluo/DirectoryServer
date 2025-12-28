@@ -1,6 +1,3 @@
-#define UNICODE
-#define _UNICODE
-
 #include <winsock2.h>
 #include <windows.h>
 #include <commctrl.h>
@@ -102,7 +99,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         L"目录共享服务器",
         WS_OVERLAPPEDWINDOW & ~WS_MAXIMIZEBOX & ~WS_THICKFRAME,
         CW_USEDEFAULT, CW_USEDEFAULT,
-        700, 550,
+        700, 580,
         nullptr,
         nullptr,
         hInstance,
@@ -238,15 +235,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 50, 320, 500, 25,
                 hWnd, NULL, NULL, NULL);
             SendMessage(g_hUrlLabel, WM_SETFONT, (WPARAM)g_hFontSmall, TRUE);
-            
-            // 复制按钮（现代样式）
-            g_hCopyBtn = CreateWindowEx(
-                0,
-                L"BUTTON", L"📋 复制链接",
-                WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
-                550, 318, 100, 30,
-                hWnd, (HMENU)ID_COPY_BTN, NULL, NULL);
-            SendMessage(g_hCopyBtn, WM_SETFONT, (WPARAM)g_hFontNormal, TRUE);
 
             // 信息标签
             HWND hInfoLabel = CreateWindow(L"STATIC", L"将选定的目录共享到网络，方便其他设备访问文件。",
