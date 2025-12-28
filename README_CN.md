@@ -12,21 +12,31 @@
 
 ## 截图
 
-*(在此处添加截图)*
+### 主界面
+![主界面](screenshots/01_main_interface.png)
+
+### 浏览器访问
+![浏览器访问](screenshots/02_browser_access.png)
+
+## 安装
+
+### 下载预构建的可执行文件（最简单）
+
+1. 前往 [Releases](https://github.com/Jarrettluo/DirectoryServer/releases) 页面
+2. 从 `release/` 文件夹下载最新的 `DirectoryServer.exe`
+3. 直接运行可执行文件 - 无需安装！
 
 ## 系统要求
 
 - Windows 10 或更高版本
-- MinGW-w64 编译器（用于从源码构建）
-- CMake（可选，用于高级构建）
 
 ## 从源码构建
 
-### 使用提供的构建脚本（推荐）
+### 使用提供的构建脚本
 
 1. 克隆仓库：
    ```bash
-   git clone https://github.com/yourusername/DirectoryServer.git
+   git clone https://github.com/Jarrettluo/DirectoryServer.git
    cd DirectoryServer
    ```
 
@@ -36,22 +46,6 @@
    ```
 
 这将编译项目并自动启动应用程序。
-
-### 使用CMake
-
-1. 安装CMake和MinGW-w64
-2. 导航到src目录：
-   ```bash
-   cd src
-   ```
-3. 生成构建文件：
-   ```bash
-   cmake .
-   ```
-4. 构建：
-   ```bash
-   make
-   ```
 
 ## 使用方法
 

@@ -12,21 +12,31 @@ A simple directory sharing server for Windows with a modern GUI interface. Share
 
 ## Screenshots
 
-*(Add screenshots here when available)*
+### Main Interface
+![Main Interface](screenshots/01_main_interface.png)
+
+### Web Browser Access
+![Web Browser Access](screenshots/02_browser_access.png)
+
+## Installation
+
+### Download Pre-built Executable (Easiest)
+
+1. Go to the [Releases](https://github.com/Jarrettluo/DirectoryServer/releases) page
+2. Download the latest `DirectoryServer.exe` from the `release/` folder
+3. Run the executable directly - no installation required!
 
 ## Requirements
 
 - Windows 10 or later
-- MinGW-w64 compiler (for building from source)
-- CMake (optional, for advanced builds)
 
 ## Building from Source
 
-### Using the provided build script (Recommended)
+### Using the provided build script
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/DirectoryServer.git
+   git clone https://github.com/Jarrettluo/DirectoryServer.git
    cd DirectoryServer
    ```
 
@@ -36,22 +46,6 @@ A simple directory sharing server for Windows with a modern GUI interface. Share
    ```
 
 This will compile the project and automatically start the application.
-
-### Using CMake
-
-1. Install CMake and MinGW-w64
-2. Navigate to the src directory:
-   ```bash
-   cd src
-   ```
-3. Generate build files:
-   ```bash
-   cmake .
-   ```
-4. Build:
-   ```bash
-   make
-   ```
 
 ## Usage
 
